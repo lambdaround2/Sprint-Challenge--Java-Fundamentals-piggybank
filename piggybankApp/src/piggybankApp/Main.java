@@ -16,11 +16,6 @@ public class Main {
         Dollar dep6 = new Dollar();
         Penny dep7 = new Penny(10);
 
-        // System.out.println(dep3.getQty());
-        // System.out.println(dep3.getName());
-        // System.out.println(dep2.getQty());
-        // System.out.println(dep2.getName());
-
         ArrayList<Money> piggybank = new ArrayList<Money>();
         piggybank.add(dep1);
         piggybank.add(dep2);
@@ -31,6 +26,14 @@ public class Main {
         piggybank.add(dep7);
 
         piggybank.forEach(el -> System.out.println(el.getName()));
+
+        double sum = 0.0;
+        for (Money p : piggybank) {
+            double value = p.getTotalValue();
+            sum = sum + value;
+        }
+
+        System.out.println("The piggy bank holds " + fp.format(sum));
     }
 
 }

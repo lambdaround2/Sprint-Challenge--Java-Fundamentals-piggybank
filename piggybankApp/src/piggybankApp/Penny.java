@@ -4,11 +4,11 @@ public class Penny extends Money {
 
     public Penny(int qty) {
         super(qty);
-        baseValue = 0.25;
+        baseValue = 0.01;
     }
 
     public Penny() {
-        baseValue = 0.25;
+        baseValue = 0.01;
     }
 
     @Override
