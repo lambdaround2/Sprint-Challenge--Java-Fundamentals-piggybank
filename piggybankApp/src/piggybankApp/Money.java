@@ -19,10 +19,6 @@ public abstract class Money {
         return qty;
     }
 
-    public void setQty(int qty) {
-        this.qty = qty;
-    }
-
     public double getTotalValue() {
         return baseValue * qty;
     }
